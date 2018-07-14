@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 
 public class SelectLevel_P extends JPanel {
 	private Frame F;
+	private EntityCtrl EC = new EntityCtrl();
 	private JButton back;
 	private JButton[] button = null;
 	private String[] s = {"N1","N2","N3","N4","N5"};
@@ -42,6 +43,11 @@ public class SelectLevel_P extends JPanel {
 			if(e.getActionCommand().equals("N1")) {
 				System.out.println("동작1");
 				F.getCardLayout().show(F.getContentPane(), "Quest");
+				
+				String[] s = EC.setTest(3);
+				if(s != null) {
+					
+				}
 			}
 			else if(e.getActionCommand().equals("N2")) {
 				System.out.println("동작2");

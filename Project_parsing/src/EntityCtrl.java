@@ -1,8 +1,11 @@
+import java.util.Random;
 
 class EntityCtrl {
 	DataHash dh = new DataHash();
+	private int Level;
+	private String answer = "";
 	
-	public void EntityCtrl() {
+	public EntityCtrl() {
 		dh.DataSet();
 	}
 	
@@ -13,7 +16,20 @@ class EntityCtrl {
 		System.out.println(dhs.korean);
 	}
 	
-	public void setTest() {
-		
+	public String[] setTest(int level) {
+		if(level == 3) {
+			int random = (int)(Math.random() * dh.word.size());
+			WordEntity japan = dh.word.get(random);
+			String[] s = new String[3];
+			s[0] = japan.japan;
+			s[1] = japan.japan_c;
+			s[2] = japan.korean;
+			answer = japan.korean;
+			
+			return s;
+		}
+		return null;
 	}
+	
+	
 }

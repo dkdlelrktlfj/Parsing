@@ -10,6 +10,7 @@ class DataHash {
 	private final static String address = "https://ja.dict.naver.com/jlpt/level-5/parts-1/p1.nhn";
 	HashMap<Integer, WordEntity> word = new HashMap<Integer,WordEntity>();
 	
+	
 	public void DataSet() {
 		try {
 			Document doc = Jsoup.connect(address).header("User-Agent", "Mozilla/5.0").get();		

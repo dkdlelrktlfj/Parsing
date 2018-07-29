@@ -17,9 +17,9 @@ public class Main_P extends JPanel{
 			F = f;
 			
 			
-			button1 = new JButton("´Ü¾î º¸±â");
+			button1 = new JButton("ë‹¨ì–´ ë³´ê¸°");
 			button1.addActionListener(new ClickButton());
-			button2 = new JButton("¹®Á¦ Ç®±â");
+			button2 = new JButton("ë¬¸ì œ í’€ê¸°");
 			button2.addActionListener(new ClickButton());
 			button3 = new JButton("3");
 			button3.addActionListener(new ClickButton());
@@ -40,12 +40,18 @@ public class Main_P extends JPanel{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if(e.getSource() == button1) {
-					System.out.println("µ¿ÀÛ1");
+					System.out.println("ë™ì‘1");
 					
 				}
 				else if(e.getSource() == button2) {
-					System.out.println("µ¿ÀÛ2");
+					System.out.println("ë™ì‘2");
 					F.getCardLayout().show(F.getContentPane(), "SelectLevel");
+				}
+				else if(e.getSource() == button3) {
+					System.out.println("ë™ì‘3");
+				}
+				else if(e.getSource() == button4) {
+					System.out.println("ë™ì‘4");
 				}
 			}
 		}

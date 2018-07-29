@@ -8,7 +8,7 @@ import javax.swing.JPanel;
 
 public class SelectLevel_P extends JPanel {
 	private Frame F;
-	private EntityCtrl EC = new EntityCtrl();
+	Quest_P Q = new Quest_P(null);
 	private JButton back;
 	private JButton[] button = null;
 	private String[] s = {"N1","N2","N3","N4","N5"};
@@ -26,7 +26,7 @@ public class SelectLevel_P extends JPanel {
 			button[i].addActionListener(new ClickButton());
 			add(button[i]);
 		}
-		add(back = new JButton("µ¹¾Æ°¡±â"));
+		add(back = new JButton("ëŒì•„ê°€ê¸°"));
 		back.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -41,28 +41,24 @@ public class SelectLevel_P extends JPanel {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			if(e.getActionCommand().equals("N1")) {
-				System.out.println("µ¿ÀÛ1");
+				System.out.println("ë™ì‘1");
 				F.getCardLayout().show(F.getContentPane(), "Quest");
-				
-				String[] s = EC.setTest(3);
-				if(s != null) {
-					
-				}
+				F.QuestSet(3);
 			}
 			else if(e.getActionCommand().equals("N2")) {
-				System.out.println("µ¿ÀÛ2");
+				System.out.println("ë™ì‘2");
 				F.getCardLayout().show(F.getContentPane(), "Quest");
 			}
 			else if(e.getActionCommand().equals("N3")) {
-				System.out.println("µ¿ÀÛ3");
+				System.out.println("ë™ì‘3");
 				F.getCardLayout().show(F.getContentPane(), "Quest");
 			}
 			else if(e.getActionCommand().equals("N4")) {
-				System.out.println("µ¿ÀÛ4");
+				System.out.println("ï¿½ï¿½ï¿½ï¿½4");
 				F.getCardLayout().show(F.getContentPane(), "Quest");
 			}
 			else if(e.getActionCommand().equals("N5")) {
-				System.out.println("µ¿ÀÛ5");
+				System.out.println("ë™ì‘5");
 				F.getCardLayout().show(F.getContentPane(), "Quest");
 			}
 		}
